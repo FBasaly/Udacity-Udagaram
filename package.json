@@ -10,7 +10,7 @@
     "dev": "ts-node-dev --respawn --transpileOnly ./src/server.ts",
     "prod": "tsc && node ./www/server.js",
     "clean": "rm -rf www/ || true",
-    "build": "npm run clean  && tsc && @powershell copy package.json www/package.json && cd www && mkdir tmp && bestzip Archive.zip build/* && cd .. ",
+    "build": "npm run clean  && tsc && @powershell copy package.json www/package.json && cd www && mkdir tmp && zip -r Archive.zip . && cd .. ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
